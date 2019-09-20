@@ -72,9 +72,10 @@ document.getElementsByTagName( 'head' )[0].appendChild( link );
                     <h2>Hight Level Architecture</h2>
                     <h3>The Agenda</h3>
                     <ul>
-                        <li>App Sandbox</li>
-                        <li>Permissions &amp; Groups</li>
-                        <li>Binder for IPC</li>
+                        <li>Level 0: App Sandbox</li>
+                        <li>Power Ups: Permissions &amp; Groups</li>
+                        <li>Reaching Out: Binder for IPC</li>
+                        <li>How it All Goes Wrong</li>
                     </ul>
                     <aside class="notes">
                         <p>Binder is the way in which applications reach out and interact with other applications and system components</p>
@@ -95,6 +96,50 @@ document.getElementsByTagName( 'head' )[0].appendChild( link );
                     <p>Each app gets dedicated UID</p>
                     <p>Each app given home directory containing private data</p>
                 </section>
+
+                <section>
+                    <h2>Permissions</h2>
+                </section>
+
+                <section>
+                    <h2>Binder</h2>
+                </section>
+
+                <section>
+                    <section>
+                        <h2>Exploit Methods</h2>
+                    </section>
+
+                    <section>
+                        <h3>The Human Element</h3>
+                        <p>Request more permissions then needed<p>
+                        <p>Mine crypto</p>
+                        <p><small>Technically not breaking the threat model</small></p>
+                    </section>
+
+                    <section>
+                        <h3>File System Issues</h3>
+                        <p>Usually device specific</p>
+                        <p>Not common thanks to recent enhancements.</p>
+                    </section>
+                    
+                    <section>
+                        <h3>Device/Manufacturer Specific Vulnerabilities</h3>
+                        <p>Drivers, TEE, built-in apps</p>
+                        <p>Becoming more and more prevalent</p>
+                    </section>
+
+                    <section>
+                        <h3>Linux Kernel Vulnerabilities</h3>
+                        <p>Can be ported from "regular" Linux kernel exploits</p>
+                    </section>
+
+                    <section>
+                        <h3>Platform Vulnerabilities</h3>
+                        <p>System daemons, the app framework, zygote and ADB</p>
+                    </section>
+                </section>
+
             </div>
         </div>
 

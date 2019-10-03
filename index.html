@@ -63,7 +63,7 @@ document.getElementsByTagName( 'head' )[0].appendChild( link );
                         Two Examples:
                         <ul>
                             <li>QR Code reader that automatically opens urls. What about opening a file url that points to sensitive data?</li>
-                            <li>An exploited app</li>
+                            <li>Ransomware</li>
                         </ul>
                     </aside>
                 </section>
@@ -75,6 +75,7 @@ document.getElementsByTagName( 'head' )[0].appendChild( link );
                         <li>Level 0: App Sandbox</li>
                         <li>Power Ups: Permissions &amp; Groups</li>
                         <li>Reaching Out: Binder for IPC</li>
+                        <li>Power Broker: SELinux</li>
                         <li>How it All Goes Wrong</li>
                     </ul>
                     <aside class="notes">
@@ -95,14 +96,85 @@ document.getElementsByTagName( 'head' )[0].appendChild( link );
                     <h2>App Sandbox</h2>
                     <p>Each app gets dedicated UID</p>
                     <p>Each app given home directory containing private data</p>
+                    <p>File permissions outside of sandbox very limited</p>
                 </section>
 
                 <section>
-                    <h2>Permissions</h2>
+                    <section>
+                        <h2>Permissions</h2>
+                    </section>
+                    <section>
+                        <h3>What</h3>
+                        <p>Whitelist apps capabilities</p>
+                        <p>App cannot access a capability without first getting permission from the user</p>
+                        <p>Some permissions map to GIDs, but not all<p>
+                        <aside class="notes">
+                            <p>This means if I compromise as app, I might not be able to perform some operations because the apps lacks the permissions</p>
+                        </aside>
+                    </section>
+                    <section>
+                        <pre><code data-trim>
+                            de.srlabs.snoopsnitch 10065 0 /data/user/0/de.srlabs.snoopsnitch default 3003
+                        </code></pre>
+
+                        <pre><code data-trim>
+                            <package name="de.srlabs.snoopsnitch" codePath="/data/app/de.srlabs.snoopsnitch-1" nativeLibraryPath="/data/app/de.srlabs.snoopsnitch-1/lib" primaryCpuAbi="armeabi" publicFlags="940097092" privateFlags="0" ft="16d82a3ffe8" it="16d82a4051b" ut="16d82a4051b" version="38" userId="10065" installer="com.android.packageinstaller">
+                                <sigs count="1">
+                                    <cert index="3" key="..." />
+                                </sigs>
+                                <perms>
+                                    <item name="android.permission.RECEIVE_BOOT_COMPLETED" granted="true" flags="0" />
+                                    <item name="android.permission.INTERNET" granted="true" flags="0" />
+                                    <item name="android.permission.ACCESS_NETWORK_STATE" granted="true" flags="0" />
+                                    <item name="android.permission.VIBRATE" granted="true" flags="0" />
+                                    <item name="android.permission.WAKE_LOCK" granted="true" flags="0" />
+                                </perms>
+                                <proper-signing-keyset identifier="6" />
+                            </package>
+                        </code></pre>
+                    </section>
+
+
+                    <section>
+                        <h3>How</h3>
+                        <ul>
+                            <li><em>In Kernel:</em> Some permissions map to GIDs that the kernel to check to allow/deny an operation</li>
+                            <li><em>Unix Socket:</em> File permissions and group on daemon socket limit access to said socket</li>
+                            <li><em>Android Framework:</em>  The framework check to make sure the callning process has the required permissions</li>
+                        </ul>
+                    </section>
                 </section>
 
                 <section>
-                    <h2>Binder</h2>
+                    <section>
+                        <h2>Binder</h2>
+                    </section>
+                    <section>
+                        <h3>What is Binder</h3>
+                        <p>Protocol and Kernel model for performing IPC</p>
+                        <p>Intent, Content Providers and Services all implemented on top of Binder<p>
+                    </section>
+                    <section>
+                        <h3>Enforcing Permissions</h3>
+                        <p>Kernel model sets callers UID &amp; GID (i.e. you know who is making the request)<p>
+                        <p>Binder tokens are unique, un-guessable, identities<p>
+                        <aside class="notes">
+                            <p>Because the identity us unique it can be passed from one process to another, and because it us unguessable it cannot be forged</p>
+                            <p>Thus a Binder object reference acts as a security token<p>
+                        </aside>
+                    </section>
+                </section>
+                
+                <section>
+                    <section>
+                        <h2>SELiux</h2>
+                    </section>
+                    <section>
+                        <h3>What and How?</h3>
+                        <p>Kernel-level MAC (vs. already discussed DAC)</p>
+                        <p>Customized for Android</p>
+                        <p>Added extensions for things like zygot, Bidner etc.</p>
+                    </section>
                 </section>
 
                 <section>

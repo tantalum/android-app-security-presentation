@@ -1,0 +1,21 @@
+/data/data/de.srlabs.snoopsnitch:
+total 32
+drwxrwx--x 2 u0_a65 u0_a65 4096 2019-09-30 11:31 app_textures
+drwx------ 5 u0_a65 u0_a65 4096 2019-09-30 11:34 app_webview
+drwxrwx--x 4 u0_a65 u0_a65 8192 2019-09-30 11:34 cache
+drwxrwx--x 2 u0_a65 u0_a65 4096 2019-09-30 09:47 code_cache
+drwxrwx--x 2 u0_a65 u0_a65 4096 2019-09-30 11:31 databases
+drwxrwx--x 2 u0_a65 u0_a65 4096 2019-09-30 11:31 files
+lrwxrwxrwx 1 root   root     41 2019-10-03 18:34 lib -> /data/app/de.srlabs.snoopsnitch-1/lib/arm
+drwxrwx--x 2 u0_a65 u0_a65 4096 2019-09-30 11:38 shared_prefs
+
+/data/misc/profiles/cur/0/de.srlabs.snoopsnitch:
+total 4
+-rw------- 1 u0_a65 u0_a65 492 2019-09-30 11:38 primary.prof
+
+/data/misc/profiles/ref/de.srlabs.snoopsnitch:
+total 0
+
+/data/user_de/0/de.srlabs.snoopsnitch:
+total 4
+drwxrwx--x 2 u0_a65 u0_a65 4096 2019-09-30 11:38 code_cache

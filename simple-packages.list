@@ -1,0 +1,5 @@
+com.vrem.wifianalyzer 10066 0 /data/user/0/com.vrem.wifianalyzer default none
+org.fdroid.fdroid 10064 0 /data/user/0/org.fdroid.fdroid default 3002,3003,3001
+de.srlabs.snoopsnitch 10065 0 /data/user/0/de.srlabs.snoopsnitch default 3003
+com.android.phone 1001 0 /data/user_de/0/com.android.phone platform:privapp 3002,3003,3001
+com.android.bluetooth 1002 0 /data/user_de/0/com.android.bluetooth platform 3002,3003,3001,3008,3010,3005,1016

@@ -1,0 +1,73 @@
+<packages>
+    <package name="com.vrem.wifianalyzer" codePath="/data/app/com.vrem.wifianalyzer-1" nativeLibraryPath="/data/app/com.vrem.wifianalyzer-1/lib" publicFlags="944291396" privateFlags="0" ft="16d82a59a10" it="16d82a59d8a" ut="16d82a59d8a" version="49" userId="10066" installer="com.android.packageinstaller">
+        <sigs count="1">
+            <cert index="5" key="..." />
+        </sigs>
+        <perms>
+            <item name="android.permission.CHANGE_WIFI_STATE" granted="true" flags="0" />
+            <item name="android.permission.ACCESS_WIFI_STATE" granted="true" flags="0" />
+        </perms>
+        <proper-signing-keyset identifier="7" />
+    </package>
+
+    <package name="de.srlabs.snoopsnitch" codePath="/data/app/de.srlabs.snoopsnitch-1" nativeLibraryPath="/data/app/de.srlabs.snoopsnitch-1/lib" primaryCpuAbi="armeabi" publicFlags="940097092" privateFlags="0" ft="16d82a3ffe8" it="16d82a4051b" ut="16d82a4051b" version="38" userId="10065" installer="com.android.packageinstaller">
+        <sigs count="1">
+            <cert index="3" key="..." />
+        </sigs>
+        <perms>
+            <item name="android.permission.RECEIVE_BOOT_COMPLETED" granted="true" flags="0" />
+            <item name="android.permission.INTERNET" granted="true" flags="0" />
+            <item name="android.permission.ACCESS_NETWORK_STATE" granted="true" flags="0" />
+            <item name="android.permission.VIBRATE" granted="true" flags="0" />
+            <item name="android.permission.WAKE_LOCK" granted="true" flags="0" />
+        </perms>
+        <proper-signing-keyset identifier="6" />
+    </package>
+
+    <package name="com.android.bluetooth" codePath="/system/app/Bluetooth" nativeLibraryPath="/system/app/Bluetooth/lib" primaryCpuAbi="armeabi-v7a" publicFlags="810073669" privateFlags="0" ft="11e90c6e300" it="11e90c6e300" ut="11e90c6e300" version="25" sharedUserId="1002" isOrphaned="true">
+        <sigs count="1">
+            <cert index="1" />
+        </sigs>
+        <perms>
+            <item name="android.permission.REAL_GET_TASKS" granted="true" flags="0" />
+            <item name="com.android.gallery3d.permission.GALLERY_PROVIDER" granted="true" flags="0" />
+            <item name="android.permission.WRITE_SETTINGS" granted="true" flags="0" />
+            <item name="android.permission.MODIFY_AUDIO_SETTINGS" granted="true" flags="0" />
+            <item name="android.permission.MODIFY_AUDIO_ROUTING" granted="true" flags="0" />
+            <item name="android.permission.CALL_PRIVILEGED" granted="true" flags="0" />
+            <item name="android.permission.CHANGE_NETWORK_STATE" granted="true" flags="0" />
+            <item name="android.permission.RECEIVE_BOOT_COMPLETED" granted="true" flags="0" />
+            <item name="android.permission.DEVICE_POWER" granted="true" flags="0" />
+            <item name="android.permission.READ_PROFILE" granted="true" flags="0" />
+            <item name="android.permission.BLUETOOTH" granted="true" flags="0" />
+            <item name="android.permission.INTERNET" granted="true" flags="0" />
+            <item name="android.permission.BLUETOOTH_ADMIN" granted="true" flags="0" />
+            <item name="android.permission.UPDATE_DEVICE_STATS" granted="true" flags="0" />
+            <item name="android.permission.BLUETOOTH_STACK" granted="true" flags="0" />
+            <item name="android.permission.BLUETOOTH_MAP" granted="true" flags="0" />
+            <item name="android.permission.NET_ADMIN" granted="true" flags="0" />
+            <item name="android.permission.INTERACT_ACROSS_USERS_FULL" granted="true" flags="0" />
+            <item name="android.permission.TETHER_PRIVILEGED" granted="true" flags="0" />
+            <item name="android.permission.WRITE_SECURE_SETTINGS" granted="true" flags="0" />
+            <item name="android.permission.NFC_HANDOVER_STATUS" granted="true" flags="0" />
+            <item name="android.permission.READ_PRIVILEGED_PHONE_STATE" granted="true" flags="0" />
+            <item name="android.permission.BLUETOOTH_PRIVILEGED" granted="true" flags="0" />
+            <item name="android.permission.WRITE_SMS" granted="true" flags="0" />
+            <item name="android.permission.WRITE_APN_SETTINGS" granted="true" flags="0" />
+            <item name="android.permission.ACCESS_BLUETOOTH_SHARE" granted="true" flags="0" />
+            <item name="android.permission.MANAGE_USERS" granted="true" flags="0" />
+            <item name="android.permission.ACCESS_NETWORK_STATE" granted="true" flags="0" />
+            <item name="android.permission.INTERACT_ACROSS_USERS" granted="true" flags="0" />
+            <item name="android.permission.NET_TUNNELING" granted="true" flags="0" />
+            <item name="android.permission.CONNECTIVITY_INTERNAL" granted="true" flags="0" />
+            <item name="android.permission.VIBRATE" granted="true" flags="0" />
+            <item name="android.permission.MODIFY_PHONE_STATE" granted="true" flags="0" />
+            <item name="android.permission.DUMP" granted="true" flags="0" />
+            <item name="android.permission.WAKE_LOCK" granted="true" flags="0" />
+            <item name="com.android.email.permission.ACCESS_PROVIDER" granted="true" flags="0" />
+            <item name="android.permission.UPDATE_APP_OPS_STATS" granted="true" flags="0" />
+            <item name="android.permission.MEDIA_CONTENT_CONTROL" granted="true" flags="0" />
+        </perms>
+        <proper-signing-keyset identifier="1" />
+    </package>
+</packages>

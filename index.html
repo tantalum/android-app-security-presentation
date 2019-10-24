@@ -93,10 +93,40 @@ document.getElementsByTagName( 'head' )[0].appendChild( link );
                 </section>
 
                 <section>
-                    <h2>App Sandbox</h2>
-                    <p>Each app gets dedicated UID</p>
-                    <p>Each app given home directory containing private data</p>
-                    <p>File permissions outside of sandbox very limited</p>
+                    <section>
+                        <h2>App Sandbox</h2>
+                        <p>Each app gets dedicated UID</p>
+                        <p>Each app given home directory containing private data</p>
+                        <p>File permissions outside of sandbox very limited</p>
+                    </section>
+
+                    <section>
+                        <pre><code data-trim>
+                            /data/app/de.srlabs.snoopsnitch-1/
+                            -rw-r--r-- 1 system system  5023023 2019-09-30 09:47 base.apk
+                            drwxr-xr-x 3 system system     4096 2019-09-30 09:47 lib
+                            drwxrwx--x 3 system install    4096 2019-09-30 09:47 oat
+
+                            /data/data/de.srlabs.snoopsnitch:
+                            drwxrwx--x 2 u0_a65 u0_a65 4096 2019-09-30 11:31 app_textures
+                            drwx------ 5 u0_a65 u0_a65 4096 2019-09-30 11:34 app_webview
+                            drwxrwx--x 4 u0_a65 u0_a65 8192 2019-09-30 11:34 cache
+                            drwxrwx--x 2 u0_a65 u0_a65 4096 2019-09-30 09:47 code_cache
+                            drwxrwx--x 2 u0_a65 u0_a65 4096 2019-09-30 11:31 databases
+                            drwxrwx--x 2 u0_a65 u0_a65 4096 2019-09-30 11:31 files
+                            lrwxrwxrwx 1 root   root     41 2019-10-03 18:34 lib -> /data/app/de.srlabs.snoopsnitch-1/lib/arm
+                            drwxrwx--x 2 u0_a65 u0_a65 4096 2019-09-30 11:38 shared_prefs
+
+                            /data/misc/profiles/cur/0/de.srlabs.snoopsnitch:
+                            -rw------- 1 u0_a65 u0_a65 492 2019-09-30 11:38 primary.prof
+
+                            /data/misc/profiles/ref/de.srlabs.snoopsnitch:
+                            total 0
+
+                            /data/user_de/0/de.srlabs.snoopsnitch:
+                            drwxrwx--x 2 u0_a65 u0_a65 4096 2019-09-30 11:38 code_cache
+                        </code></pre>
+                    </section>
                 </section>
 
                 <section>
@@ -178,6 +208,10 @@ document.getElementsByTagName( 'head' )[0].appendChild( link );
                 </section>
 
                 <section>
+                    <h1>Intermission</h2>
+                </section>
+
+                <section>
                     <section>
                         <h2>Exploit Methods</h2>
                     </section>
@@ -210,6 +244,11 @@ document.getElementsByTagName( 'head' )[0].appendChild( link );
                         <h3>Platform Vulnerabilities</h3>
                         <p>System daemons, the app framework, zygote and ADB</p>
                     </section>
+                </section>
+
+                <section>
+                    <h1>Thank you!</h1>
+                    <h2>Questions?</h2>
                 </section>
 
             </div>

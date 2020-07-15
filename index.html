@@ -144,10 +144,6 @@ document.getElementsByTagName( 'head' )[0].appendChild( link );
                     </section>
                     <section>
                         <pre><code data-trim>
-                            de.srlabs.snoopsnitch 10065 0 /data/user/0/de.srlabs.snoopsnitch default 3003
-                        </code></pre>
-
-                        <pre><code data-trim>
                             <package name="de.srlabs.snoopsnitch" codePath="/data/app/de.srlabs.snoopsnitch-1" nativeLibraryPath="/data/app/de.srlabs.snoopsnitch-1/lib" primaryCpuAbi="armeabi" publicFlags="940097092" privateFlags="0" ft="16d82a3ffe8" it="16d82a4051b" ut="16d82a4051b" version="38" userId="10065" installer="com.android.packageinstaller">
                                 <sigs count="1">
                                     <cert index="3" key="..." />
@@ -164,8 +160,7 @@ document.getElementsByTagName( 'head' )[0].appendChild( link );
                         </code></pre>
 
                         <aside class="notes">
-                            <p>Groups and capabilities defined in: <code>android_filesystem_config.h</code></p>
-                            <p>See: <code>/system/core/include/private/android_filesystem_config.h</code></p>
+                            <p>See: <code>./system/core/include/private/android_filesystem_config.h</code></p>
                     </section>
 
 
@@ -201,7 +196,7 @@ document.getElementsByTagName( 'head' )[0].appendChild( link );
                 
                 <section>
                     <section>
-                        <h2>SELiux</h2>
+                        <h2>SELinux</h2>
                     </section>
                     <section>
                         <h3>What and How?</h3>
@@ -230,7 +225,7 @@ document.getElementsByTagName( 'head' )[0].appendChild( link );
                     <section>
                         <h3>File System Issues</h3>
                         <p>Usually device specific</p>
-                        <p>Not common thanks to recent enhancements.</p>
+                        <p>Not common thanks to recent enhancements (i.e. SELinux).</p>
                     </section>
                     
                     <section>
@@ -247,6 +242,22 @@ document.getElementsByTagName( 'head' )[0].appendChild( link );
                     <section>
                         <h3>Platform Vulnerabilities</h3>
                         <p>System daemons, the app framework, zygote and ADB</p>
+                    </section>
+                </section>
+
+                <section>
+                    <section>
+                        <h1>Past Vulnerabilities</h1>
+                    </section>
+
+                    <section>
+                        <h2>GingerBreak</h2>
+                        <p><em>Cause:</em> Integer overflow in the <code>vold</code> daemon</p>
+                    </section>
+
+                    <section>
+                        <h2>Zimperlich</h2>
+                        <p><em>Cause:</em> The Dalvik VM failed to check for failure after calling <code>setuid()</code> to drop privileges</p>
                     </section>
                 </section>
 
